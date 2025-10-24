@@ -42,8 +42,8 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Being.cs" />
-    <Compile Include="Probe.cs" />
     <Compile Include="IInstrument.cs" />
+    <Compile Include="Probe.cs" />
     <Compile Include="Spaceship.cs" />
     <Compile Include="Martian.cs" />
     <Compile Include="Earthling.cs" />

@@ -1,4 +1,8 @@
-﻿using System;
+﻿// Zach Dillion
+// James Odjewuyi
+// Program 5
+// Space Objects
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -33,6 +37,7 @@ namespace SpaceObjects
         // overriding Name property to say Earthling
         public override string Name => "Earthling";
 
+        // Property for walking speed variable
         public double WalkingSpeed
         {
             get { return walkingSpeed; }
@@ -45,7 +50,7 @@ namespace SpaceObjects
         }
 
 
-        // override ComputeProperty: define
+        // override ComputeProperty: defines earthling stamina as (height * arms * walkingSpeed / 10)
         public override double ComputeProperty()
         {
             return (Height * Arms * WalkingSpeed) / 10.0;

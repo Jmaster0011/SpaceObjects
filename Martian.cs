@@ -1,4 +1,8 @@
-﻿using System;
+﻿// Zach Dillion
+// James Odjewuyi
+// Program 5
+// Space Objects
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -25,22 +29,23 @@ namespace SpaceObjects
                         double teleportRangeValue)
             : base(xValue, yValue, zValue, heightValue, armsValue)
         {
-            teleportRange = teleportRangeValue;
+            TeleportRange = teleportRangeValue;
             MartianCount++;
         }
 
+        // Property for teleport range with validation
         public double TeleportRange
         {
             get { return teleportRange; }
             set
             {
                 if (value < 0)
-                    throw new ArgumentOutOfRangeException
-                        ("TeleportRange", "Teleport range cannot be negative!");
+                    throw new ArgumentOutOfRangeException("TeleportRange", "Teleport range cannot be negative!");
                 teleportRange = value;
             }
         }
 
+        // Overriding name property to say Martian
         public override string Name => "Martian";
 
         public override double ComputeProperty()
@@ -50,6 +55,8 @@ namespace SpaceObjects
             return (Height * Arms) / TeleportRange;
         }
 
+
+        // Overriden ToString method for comprehensive display
         public override string ToString()
         {
             return $"Martian | Location: {GetLocation()} | Height: {Height}' \n | Arms: {Arms} | " +

@@ -1,4 +1,8 @@
-﻿using System;
+﻿// Zach Dillion
+// James Odjewuyi
+// Program 5
+// Space Objects
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -130,7 +134,7 @@ namespace SpaceObjects
         // override ToString for comprehensive display
         public override string ToString()
         {
-            return $"SpaceShip | Type: {ShipType} | Location: {GetLocation()} \n| " +
+            return $"SpaceShip | Type: {ShipType} \n| Location: {GetLocation()} \n| " +
                    $"Payload: {CurrentPayload}/{PayloadCapacity} \n| Fuel: {FuelLevel:F1} | " +
                    $"Max Speed: {MaxSpeed} | Crew: {CrewCapacity} \n|  Efficiency: {ComputeProperty():F2}";
         }

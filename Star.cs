@@ -1,4 +1,8 @@
-﻿using System;
+﻿// Zach Dillion
+// James Odjewuyi
+// Program 5
+// Space Objects
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -114,6 +118,7 @@ namespace SpaceObjects
             }
         }
 
+        // Property for star type
         public string Type
         { get { return type; }
             set
@@ -125,6 +130,7 @@ namespace SpaceObjects
         // overriding Name property to say Star
         public override string Name => "Star";
 
+        // Overriding ComputeProperty to find energy output
         public override double ComputeProperty()
         {
             // energy output = luminosity * temperature * radius
@@ -146,7 +152,7 @@ namespace SpaceObjects
         public override string ToString()
         {
             // returning all relevant star information
-            return $"Star | Location: {GetLocation()} | Radius: {Radius} \n| Color: {Color} | " +
+            return $"Star | Location: {GetLocation()} \n| Radius: {Radius} \n| Color: {Color} | " +
                    $"Temperature: {Temperature}K \n| Luminosity: {Luminosity} | " +
                    $"Type: {Type} \n| Energy: {ComputeProperty():E2}";
         }

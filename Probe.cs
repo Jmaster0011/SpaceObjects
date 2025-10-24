@@ -1,4 +1,8 @@
-﻿using System;
+﻿// Zach Dillion
+// James Odjewuyi
+// Program 5
+// Space Objects
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -21,7 +25,7 @@ namespace SpaceObjects
         public Probe() : base()
         {
             // starts with full battery and active status
-            batteryLevel = 100.0; 
+            batteryLevel = 100.0;
             isActive = true;
             ProbeCount++;
         }
@@ -31,10 +35,10 @@ namespace SpaceObjects
            : base(xValue, yValue, zValue)
         {
             // initializing properties
-            missionObjective = objective;
-            samplesCollected = 0;
+            MissionObjective = objective;
+            SamplesCollected = 0;
             batteryLevel = 100.0;
-            isActive = true;
+            IsActive = true;
             ProbeCount++;
         }
 
@@ -139,14 +143,14 @@ namespace SpaceObjects
             // once again the numbers mean nothing 
             return SamplesCollected * 10 * (batteryLevel / 100.0);
         }
-
+        
         // override ToString for comprehensive display
         public override string ToString()
         {
             string activeStatus = IsActive ? "Active" : "Inactive";
-            return $"Probe | Location: {GetLocation()} | Mission: {MissionObjective} | " +
-                   $"Samples: {SamplesCollected} | Battery: {batteryLevel:F1}% | " +
-                   $"Status: {activeStatus} | Scientific Value: {ComputeProperty():F2}";
+            return $"Probe | Location: {GetLocation()} \n| Mission: {MissionObjective} | " +
+                   $"Samples: {SamplesCollected} \n| Battery: {batteryLevel:F1}% | " +
+                   $"Status: {activeStatus} \n| Scientific Value: {ComputeProperty():F2}";
         }
 
     }

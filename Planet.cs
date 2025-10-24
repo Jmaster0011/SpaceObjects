@@ -1,4 +1,8 @@
-﻿using System;
+﻿// Zach Dillion
+// James Odjewuyi
+// Program 5
+// Space Objects
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -8,13 +12,13 @@ namespace SpaceObjects
 {
     public class Planet : StellarBody
     {
-        // Mars properties
+        // Planet properties
         private bool hasWater;
 
         private int moonCount;
         private bool hasAtmosphere;
 
-        // counter for all Mars instances created
+        // counter for all planet instances created
         public static int PlanetCount { get; private set; }
 
         // default constructor
@@ -102,9 +106,9 @@ namespace SpaceObjects
             string atmosphereStatus = HasAtmosphere ? "Yes" : "No";
             string habitable = IsPotentiallyHabitable() ? "Potentially Habitable" : "Not Habitable";
             // formatted output
-            return $"Planet | Location: {GetLocation()} | Radius: {Radius} | \n " +
-                   $"Water: {waterStatus} | Atmosphere: {atmosphereStatus} | " +
-                   $"Moons: {MoonCount} \n | {habitable} | \n Habitability Score: {ComputeProperty():F1}";
+            return $"Planet | Location: {GetLocation()} \n| Radius: {Radius} | " +
+                   $"Water: {waterStatus} \n| Atmosphere: {atmosphereStatus} | " +
+                   $"Moons: {MoonCount} \n| {habitable} | \nHabitability Score: {ComputeProperty():F1}";
         }
     }
 }

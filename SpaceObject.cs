@@ -1,4 +1,8 @@
-﻿using System;
+﻿// Zach Dillion
+// James Odjewuyi
+// Program 5
+// Space Objects
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -85,7 +89,7 @@ namespace SpaceObjects
         // abstract method also
         public abstract double ComputeProperty();
 
-        // virtual method so it can be reused or overridden.
+        // virtual method for GetLocation, can be overridden
         public virtual string GetLocation()
         {
             return $"({X}, {Y}, {Z})";
